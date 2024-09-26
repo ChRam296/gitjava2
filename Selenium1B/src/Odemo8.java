@@ -17,9 +17,19 @@ public class Odemo8 {
 		Odemo8 d1 = new Odemo8();
 		A a1 = new A();
 		d1.fun1(a1);
+		new A().i = 10;// updating the value of variable 'i' using anonymous object of class A
+		new A().j = 33;// updating the value of variable 'i' using anonymous object of class A
 		System.out.println(a1.i);
 		System.out.println(a1.j);
-
+        d1.fun1(a1);
+        System.out.println(a1.i);
+        System.out.println(a1.j);
+        d1.fun1(new A());
+        System.out.println(a1.i);
+        System.out.println(a1.j);
+        d1.fun1(null);
+        System.out.println(a1.i);
+        System.out.println(a1.j);
 	}
 
 }
